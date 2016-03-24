@@ -7,7 +7,7 @@ demo.state0 = function(){};
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('dojo', 'assets/image00.png');
-		game.load.spritesheet('ajay', 'assets/image01.png', 110, 155);
+		game.load.spritesheet('ajay', 'assets/image01.png', 466, 141);
 	},
 
 	create: function(){
@@ -15,6 +15,7 @@ demo.state0.prototype = {
 //        game.physics.startSystem(Phaser.Physics.ARCADE);
         var tree = game.add.sprite(0, 0, 'dojo');
         adam = game.add.sprite(0, 450, 'ajay');
+//        adam.frame = ;
 //        adam.animations.add('walk', [0, 1 , 2 , 3 , 4]);
 //        adam.anchor.setTo(0.5, 0.5);
 //        adam.scale.setTo(0.7, 0.7);
