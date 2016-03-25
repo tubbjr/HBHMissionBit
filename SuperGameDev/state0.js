@@ -1,13 +1,13 @@
 var demo = {};
-//var speed = 6;
-//var adam;
+var speed = 6;
+var adam;
 demo.state0 = function(){};
 
 
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('dojo', 'assets/image00.png');
-		game.load.spritesheet('ajay', 'assets/image01.png', 466, 141);
+		game.load.spritesheet('ajay', 'assets/ajay.png', 133, 211);
 	},
 
 	create: function(){
@@ -16,7 +16,7 @@ demo.state0.prototype = {
         var tree = game.add.sprite(0, 0, 'dojo');
         adam = game.add.sprite(0, 450, 'ajay');
 //        adam.frame = ;
-//        adam.animations.add('walk', [0, 1 , 2 , 3 , 4]);
+        adam.animations.add('walk', [0, 1 , 2 , 3 , 4]);
 //        adam.anchor.setTo(0.5, 0.5);
 //        adam.scale.setTo(0.7, 0.7);
 //        
@@ -29,29 +29,29 @@ demo.state0.prototype = {
 	},
 
 	update: function(){
-//        if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
-//                              adam.x =  adam.x + speed; 
-//                            adam.animations.play('walk', 20, true);
-//                               adam.scale.setTo(0.7, 0.7)
-//        }
-//        else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
-//            adam.x = adam.x - speed;
-//              adam.animations.play('walk', 20, true);
-//            adam.scale.setTo(-0.7, 0.7)
-//        }
-//         else{
-//        adam.animations.stop('walk');
-//        }
-//       if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
-//            adam.y = adam.y + speed;
-//        }
-//       
-//        if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
-//            adam.y = adam.y - speed;
-//                    if(adam.y < 400){
-//                        adam.y = 400;
-//                    }
-//        }
+        if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
+                              adam.x =  adam.x + speed; 
+                            adam.animations.play('walk', 20, true);
+                               adam.scale.setTo(-0.7, 0.7)
+        }
+        else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+            adam.x = adam.x - speed;
+              adam.animations.play('walk', 20, true);
+            adam.scale.setTo(0.7, 0.7)
+        }
+         else{
+        adam.animations.stop('walk');
+        }
+       if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+            adam.y = adam.y + speed;
+        }
+       
+        if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
+            adam.y = adam.y - speed;
+                    if(adam.y < 400){
+                        adam.y = 400;
+                    }
+        }
 	}
 
 };
