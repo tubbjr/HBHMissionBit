@@ -20,6 +20,7 @@ demo.state0.prototype = {
         game.physics.startSystem(Phaser.Physics.ARCADE);
         var tree = game.add.sprite(0, 0, 'dojo');
         adam = game.add.sprite(0, 450, 'ajay');
+        adam.scale.setTo(0.7, 0.7);
 //        old = game.add.sprite(300, 350, 'old');
 //        adam.frame = ;
         adam.animations.add('walk', [0, 1 , 2 , 3 , 4]);
