@@ -1,0 +1,14 @@
+var menuState ={
+
+create: funtion(){
+game.add.text(80,80,"the cool game",){font: '80px Courier',fill:'#ffffff'});
+},
+game.add.text(80,80,"press w key to start",){font: '25px Courier',fill:'#ffffff'});
+},
+var wkey = game.input.keyboard.addkey(Phaser.Keyboard.W); 
+
+wkey.onDown.addOnce(this.start, this);
+
+start: funtion(){
+   game.state.start('play'); }
+}
