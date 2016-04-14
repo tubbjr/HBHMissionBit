@@ -112,7 +112,6 @@ demo.state0.prototype = {
     if (cursors.up.isDown)
     {
         adam.body.velocity.y = -350;
-//        adam.body.velocity.y = 350;
     }
 	},
     
