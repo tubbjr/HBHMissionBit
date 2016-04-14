@@ -5,6 +5,8 @@ var adam;
 //var carrot;
 var text;
 var cursors;
+var attack;
+var enemies;
 
 
 
@@ -14,8 +16,11 @@ demo.state0 = function(){};
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('dojo', 'assets/image00.png');
-		game.load.spritesheet('ajay', 'assets/newcarrot.png', 115, 258);
+		game.load.spritesheet('ajay', 'assets/newcarrot.png', 119, 266);
 //        game.load.spritesheet('old', 'assets/sampepper.png', 850, 1107);
+        game.load.spritesheet('enemy', 'assets/enemycopy.png', 89, 141);
+        game.load.spritesheet('test', 'assets/test2.png', 83, 138);
+        game.load.spritesheet('attack', 'assets/attack.png', 163, 177);
         game.load.spritesheet('carrot', 'assets/carrot.png', 179, 414);
 
 	},
@@ -47,10 +52,17 @@ demo.state0.prototype = {
         
         var carrot = game.add.sprite(0, 150, 'carrot');
         
+<<<<<<< HEAD
 //       var enemy = game.add.sprite(50, 150, 'enemy');
 //        enemy.scale.setTo(1.6,1.6);
         
 //        enemy.animations.add('move')
+=======
+       var enemy = game.add.sprite(50, 150, 'enemy');
+        enemy.scale.setTo(1.6,1.6);
+        
+        enemy.animations.add('move')
+>>>>>>> India's-Branch
         
         
         tree.height=game.height;
@@ -66,6 +78,7 @@ demo.state0.prototype = {
         game.camera.follow(adam);
 //        this.adam.body.gravity.y = 1000;
         cursors = game.input.keyboard.createCursorKeys();
+<<<<<<< HEAD
         
 	},
 
@@ -94,6 +107,42 @@ demo.state0.prototype = {
         adam.frame = 0;
     }
 
+=======
+        
+        
+        
+    
+//        
+//        game.scale.scaleMODE = Phaser.ScaleManager.SHOW_ALL;
+	},
+
+	update: function(){
+//        game.physics.arcade.collide(adam, platforms);
+         adam.body.velocity.x = 0;
+
+    if (cursors.left.isDown)
+    {
+        //  Move to the left
+        adam.body.velocity.x = -120;
+        adam.scale.setTo(-1.5,1.5);
+        adam.animations.play('walk', 10, true);
+    }
+    else if (cursors.right.isDown)
+    {
+        //  Move to the right
+       adam.body.velocity.x = 150;
+        adam.scale.setTo(1.5,1.5);
+        adam.animations.play('walk', 10, true);
+    }
+    else
+    {
+        //  Stand still
+        adam.animations.stop();
+
+        adam.frame = 0;
+    }
+
+>>>>>>> India's-Branch
     if(cursors.down.isDown){
         adam.body.velocity.y = 350;
     }
@@ -102,6 +151,7 @@ demo.state0.prototype = {
     {
         adam.body.velocity.y = -350;
     }
+<<<<<<< HEAD
 	},
 
 };
@@ -190,6 +240,8 @@ demo.state0.prototype = {
 //            }
 ////            if (game.input.keyboard.isDown(Phaser.Keyboard.J))
 //        }
+=======
+>>>>>>> India's-Branch
 	},
     
 //    updateLine: function() {
