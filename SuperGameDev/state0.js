@@ -52,17 +52,10 @@ demo.state0.prototype = {
         
         var carrot = game.add.sprite(0, 150, 'carrot');
         
-<<<<<<< HEAD
-//       var enemy = game.add.sprite(50, 150, 'enemy');
-//        enemy.scale.setTo(1.6,1.6);
-        
-//        enemy.animations.add('move')
-=======
        var enemy = game.add.sprite(50, 150, 'enemy');
         enemy.scale.setTo(1.6,1.6);
         
         enemy.animations.add('move')
->>>>>>> India's-Branch
         
         
         tree.height=game.height;
@@ -78,36 +71,6 @@ demo.state0.prototype = {
         game.camera.follow(adam);
 //        this.adam.body.gravity.y = 1000;
         cursors = game.input.keyboard.createCursorKeys();
-<<<<<<< HEAD
-        
-	},
-
-	update: function(){
-       adam.body.velocity.x = 0;
-
-    if (cursors.left.isDown)
-    {
-        //  Move to the left
-        adam.body.velocity.x = -120;
-        adam.scale.setTo(-1.5,1.5);
-        adam.animations.play('walk', 10, true);
-    }
-    else if (cursors.right.isDown)
-    {
-        //  Move to the right
-       adam.body.velocity.x = 150;
-        adam.scale.setTo(1.5,1.5);
-        adam.animations.play('walk', 10, true);
-    }
-    else
-    {
-        //  Stand still
-        adam.animations.stop();
-
-        adam.frame = 0;
-    }
-
-=======
         
         
         
@@ -142,7 +105,6 @@ demo.state0.prototype = {
         adam.frame = 0;
     }
 
->>>>>>> India's-Branch
     if(cursors.down.isDown){
         adam.body.velocity.y = 350;
     }
@@ -151,97 +113,6 @@ demo.state0.prototype = {
     {
         adam.body.velocity.y = -350;
     }
-<<<<<<< HEAD
-	},
-
-};
-//var content = [
-//    "cool succ",
-//    "photon storm presents",
-//    "a phaser production",
-//    " ",
-//    "Kern of Duty",
-//    " ",
-//    "directed by rich davey",
-//    "rendering by mat groves",
-//    "    ",
-//    "03:45, November 4th, 2014",
-//    "somewhere in the north pacific",
-//    "mission control bravo ...",
-//];
-//
-//var text;
-//var index = 0;
-//var line = '';
-//
-//function create() {
-//
-//1
-//    text = game.add.text(32, 380, '', { font: "30pt Courier", fill: "#19cb65", stroke: "#119f4e", strokeThickness: 2 });
-//
-//    nextLine();
-//
-//}
-//
-//function updateLine() {
-//
-//    if (line.length < content[index].length)
-//    {
-//        line = content[index].substr(0, line.length + 1);
-//        // text.text = line;
-//        text.setText(line);
-//    }
-//    else
-//    {
-//        //  Wait 2 seconds then start a new line
-//        game.time.events.add(Phaser.Timer.SECOND * 2, nextLine, this);
-//    }
-//
-//}
-//
-//function nextLine() {
-//
-//    index++;
-//
-//    if (index < content.length)
-//    {
-//        line = '';
-//        game.time.events.repeat(80, content[index].length + 1, updateLine, this);
-//    }
-//
-//}
-=======
-//        else if (cursors.left.isDown)){
-////            adam.x = adam.x - speed;
-//                        adam.body.velocity.x = -speed;
-//
-//              adam.animations.play('walk', 20, true);
-//            adam.scale.setTo(0.7, 0.7)
-//        }
-//         else{
-//        adam.animations.stop('walk');
-//        }
-//       if (cursors.down.isDown)){
-////            adam.y = adam.y + speed;
-//                       adam.body.velocity.x = -speed;
-//
-//        }
-//       
-//        if (cursors.up.isDown)){
-////            adam.y = adam.y - speed;
-//                        adam.body.velocity.x = speed;
-//
-//                    if(adam.y < 400){
-//                        adam.y = 400;
-//                    }
-//            
-//            if(game.input.keyboard.isDown(Phaser.Keyboard.W) && adam.y=== 1000){
-//                adam.body.velocity.y= -350
-//            }
-////            if (game.input.keyboard.isDown(Phaser.Keyboard.J))
-//        }
-=======
->>>>>>> India's-Branch
 	},
     
 //    updateLine: function() {
@@ -272,4 +143,3 @@ demo.state0.prototype = {
 //
 //    }
 };
->>>>>>> origin/master
