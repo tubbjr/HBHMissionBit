@@ -87,14 +87,14 @@ demo.state0.prototype = {
 //        game.physics.arcade.collide(adam, platforms);
          adam.body.velocity.x = 0;
 
-    if (cursors.left.isDown)
+    if (game.input.keyboard.isDown(Phaser.Keyboard.A))
     {
         //  Move to the left
         adam.body.velocity.x = -300;
         adam.scale.setTo( .7, .7);
         adam.animations.play('walk', 10, true);
     }
-    else if (cursors.right.isDown)
+    else if (game.input.keyboard.isDown(Phaser.Keyboard.D))
     {
         //  Move to the right
        adam.body.velocity.x = 300;
@@ -109,11 +109,11 @@ demo.state0.prototype = {
         adam.frame = 0;
     }
 
-    if(cursors.down.isDown){
+    ifc(game.input.keyboard.isDown(Phaser.Keyboard.S)){
         adam.body.velocity.y = 200;
     }
     //  Allow the player to jump
-    if (cursors.up.isDown)
+    if (game.input.keyboard.isDown(Phaser.Keyboard.W))
     {
         adam.body.velocity.y = -200;
     }
