@@ -82,7 +82,7 @@ demo.state0.prototype = {
 	update: function(){
 //        game.physics.arcade.collide(adam, platforms);
          adam.body.velocity.x = 0;
-
+        carrot.body.velocity.x = 0;
     if (cursors.left.isDown)
     {
         //  Move to the left
@@ -105,14 +105,37 @@ demo.state0.prototype = {
         adam.frame = 0;
     }
 
-    if(cursors.down.isDown){
+    if(cursors.S.isDown){
         adam.body.velocity.y = 200;
     }
     //  Allow the player to jump
-    if (cursors.up.isDown)
-    {
-        adam.body.velocity.y = -200;
+    if (cursors.W.isDown){
+            
+            adam.body.velocity.y = -200;
     }
+//        
+         if (cursors.A.isDown)
+    {
+        //  Move to the left
+        carrot.body.velocity.x = -300;
+        carrot.scale.setTo( .7, .7);
+//        carrot.animations.play('walk', 10, true);
+    }
+    else if (cursors.D.isDown)
+    {
+        //  Move to the right
+       carrot.body.velocity.x = 300;
+        carrot.scale.setTo(-.7, .7);
+//        carrot.animations.play('walk', 10, true);
+    }
+    else
+    {
+        //  Stand still
+//        carrot.animations.stop();
+
+//        carrot.frame = 0;
+    }
+
 	},
     
 //    updateLine: function() {
