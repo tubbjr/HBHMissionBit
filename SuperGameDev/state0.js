@@ -117,6 +117,8 @@ demo.state0.prototype = {
 
 	},
     
+   
+    
 //    updateLine: function() {
 //
 //        if (line.length < content[index].length)
