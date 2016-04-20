@@ -38,7 +38,7 @@ demo.state0.prototype = {
         var tree = game.add.sprite(0, 0, 'dojo');
 //<<<<<<< HEAD
 //        adam = game.add.sprite(0, 450, 'ajay');
-        adam = game.add.sprite(0,450,'ajay');
+        adam = game.add.sprite(170,350,'ajay');
         adam.scale.setTo( .7, .7);
         
         
@@ -50,7 +50,7 @@ demo.state0.prototype = {
         adam.animations.add('walk', [0,1,2,3,4,5]);
 //        adam.animations.currentAnim.speed = 10;
         
-        var carrot = game.add.sprite(500, 300, 'carrot');
+        var carrot = game.add.sprite(1100, 300, 'carrot');
         
 //       var enemy = game.add.sprite(50, 150, 'enemy');
 //        enemy.scale.setTo(1.6,1.6);
@@ -66,7 +66,7 @@ demo.state0.prototype = {
 //        
         game.physics.arcade.enable(adam);
         adam.body.bounce.y = 0.2;
-        adam.body.gravity.y = 800;
+        adam.body.gravity.y = 700;
         adam.body.collideWorldBounds = true;
         game.camera.follow(adam);
 //        this.adam.body.gravity.y = 1000;
@@ -82,7 +82,7 @@ demo.state0.prototype = {
 	update: function(){
 //        game.physics.arcade.collide(adam, platforms);
          adam.body.velocity.x = 0;
-        carrot.body.velocity.x = 0;
+//        carrot.body.velocity.x = 0;
     if (cursors.left.isDown)
     {
         //  Move to the left
@@ -97,44 +97,23 @@ demo.state0.prototype = {
         adam.scale.setTo(-.7, .7);
         adam.animations.play('walk', 10, true);
     }
-    else
-    {
-        //  Stand still
-        adam.animations.stop();
-
-        adam.frame = 0;
-    }
-
-    if(cursors.S.isDown){
+         else{
+        adam.animations.stop('walk');
+        }
+//             
+        
+        if(cursors.down.isDown){
         adam.body.velocity.y = 200;
     }
     //  Allow the player to jump
-    if (cursors.W.isDown){
+    if (cursors.up.isDown){
             
             adam.body.velocity.y = -200;
     }
-//        
-         if (cursors.A.isDown)
-    {
-        //  Move to the left
-        carrot.body.velocity.x = -300;
-        carrot.scale.setTo( .7, .7);
-//        carrot.animations.play('walk', 10, true);
-    }
-    else if (cursors.D.isDown)
-    {
-        //  Move to the right
-       carrot.body.velocity.x = 300;
-        carrot.scale.setTo(-.7, .7);
-//        carrot.animations.play('walk', 10, true);
-    }
-    else
-    {
         //  Stand still
 //        carrot.animations.stop();
 
 //        carrot.frame = 0;
-    }
 
 	},
     
