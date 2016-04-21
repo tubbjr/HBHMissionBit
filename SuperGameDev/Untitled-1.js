@@ -26,7 +26,11 @@ function create() {
 
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
+<<<<<<< HEAD
     //  We check bounds colisions against all walls other than the bottom one
+=======
+    //  We check bounds collisions against all walls other than the bottom one
+>>>>>>> master
     game.physics.arcade.checkCollision.down = false;
 
     s = game.add.tileSprite(0, 0, 800, 600, 'starfield');
@@ -85,7 +89,11 @@ function update () {
 
     paddle.x = game.input.x;
 
+<<<<<<< HEAD
     if (paddle.x < 20000)
+=======
+    if (paddle.x < 24)
+>>>>>>> master
     {
         paddle.x = 24;
     }
