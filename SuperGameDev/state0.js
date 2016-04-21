@@ -86,14 +86,14 @@ demo.state0.prototype = {
     if (cursors.left.isDown)
     {
         //  Move to the left
-        adam.body.velocity.x = -300;
+        adam.body.velocity.x = -500;
         adam.scale.setTo( .7, .7);
         adam.animations.play('walk', 10, true);
     }
     else if (cursors.right.isDown)
     {
         //  Move to the right
-       adam.body.velocity.x = 300;
+       adam.body.velocity.x = 500;
         adam.scale.setTo(-.7, .7);
         adam.animations.play('walk', 10, true);
     }
@@ -103,12 +103,12 @@ demo.state0.prototype = {
 //             
         
         if(cursors.down.isDown){
-        adam.body.velocity.y = 200;
+        adam.body.velocity.y = 150;
     }
     //  Allow the player to jump
     if (cursors.up.isDown){
             
-            adam.body.velocity.y = -200;
+            adam.body.velocity.y = -150;
     }
         //  Stand still
 //        carrot.animations.stop();
