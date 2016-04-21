@@ -10,11 +10,11 @@ var attack;
 
 
 
-demo.state0 = function(){};
+demo.state0 = function () {};
 
 
 demo.state0.prototype = {
-	preload: function(){
+	preload: function () {
 		game.load.image('dojo', 'assets/image00.png');
 		game.load.spritesheet('ajay', 'assets/poop.png', 118, 266);
 //        game.load.spritesheet('old', 'assets/sampepper.png', 850, 1107);
