@@ -49,7 +49,7 @@ demo.state0.prototype = {
         var tree = game.add.sprite(0, 0, 'dojo');
 //<<<<<<< HEAD
 //        adam = game.add.sprite(0, 450, 'ajay');
-        adam = game.add.sprite(0,450,'ajay');
+        adam = game.add.sprite(170,350,'ajay');
         adam.scale.setTo( .7, .7);
         
         
@@ -61,7 +61,7 @@ demo.state0.prototype = {
         adam.animations.add('walk', [0,1,2,3,4,5]);
 //        adam.animations.currentAnim.speed = 10;
         
-        var carrot = game.add.sprite(500, 300, 'carrot');
+        var carrot = game.add.sprite(1100, 300, 'carrot');
         
 //       var enemy = game.add.sprite(50, 150, 'enemy');
 //        enemy.scale.setTo(1.6,1.6);
@@ -86,11 +86,15 @@ demo.state0.prototype = {
 //        
         game.physics.arcade.enable(adam);
         adam.body.bounce.y = 0.2;
-<<<<<<< HEAD
+//<<<<<<< HEAD
+        adam.body.gravity.y = 500;
+=======
+//<<<<<<< HEAD
         adam.body.gravity.y = 5000;
 =======
-        adam.body.gravity.y = 800;
->>>>>>> origin/master
+        adam.body.gravity.y = 500;
+//>>>>>>> origin/master
+//>>>>>>> origin/master
         adam.body.collideWorldBounds = true;
         game.camera.follow(adam);
 //        this.adam.body.gravity.y = 1000;
@@ -120,21 +124,27 @@ demo.state0.prototype = {
 <<<<<<< HEAD
 //        game.physics.arcade.collide(adam, platforms);
          adam.body.velocity.x = 0;
+<<<<<<< HEAD
 
     if (game.input.keyboard.isDown(Phaser.Keyboard.A))
+=======
+//        carrot.body.velocity.x = 0;
+    if (cursors.left.isDown)
+>>>>>>> origin/master
     {
         //  Move to the left
-        adam.body.velocity.x = -300;
+        adam.body.velocity.x = -500;
         adam.scale.setTo( .7, .7);
         adam.animations.play('walk', 10, true);
     }
     else if (game.input.keyboard.isDown(Phaser.Keyboard.D))
     {
         //  Move to the right
-       adam.body.velocity.x = 300;
+       adam.body.velocity.x = 500;
         adam.scale.setTo(-.7, .7);
         adam.animations.play('walk', 10, true);
     }
+<<<<<<< HEAD
     else
     {
         //  Stand still
@@ -177,8 +187,29 @@ demo.state0.prototype = {
     if (game.input.keyboard.isDown(Phaser.Keyboard.W))
     {
         adam.body.velocity.y = -200;
+=======
+         else{
+        adam.animations.stop('walk');
+        }
+//             
+        
+        if(cursors.down.isDown){
+        adam.body.velocity.y = 150;
     }
+    //  Allow the player to jump
+    if (cursors.up.isDown){
+            
+            adam.body.velocity.y = -150;
+>>>>>>> origin/master
+    }
+        //  Stand still
+//        carrot.animations.stop();
+
+//        carrot.frame = 0;
+
 	},
+    
+   
     
 //    updateLine: function() {
 //
