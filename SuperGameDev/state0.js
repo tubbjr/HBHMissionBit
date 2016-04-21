@@ -66,7 +66,15 @@ demo.state0.prototype = {
 //        
         game.physics.arcade.enable(adam);
         adam.body.bounce.y = 0.2;
-        adam.body.gravity.y = 700;
+//<<<<<<< HEAD
+        adam.body.gravity.y = 500;
+=======
+//<<<<<<< HEAD
+        adam.body.gravity.y = 5000;
+=======
+        adam.body.gravity.y = 500;
+//>>>>>>> origin/master
+//>>>>>>> origin/master
         adam.body.collideWorldBounds = true;
         game.camera.follow(adam);
 //        this.adam.body.gravity.y = 1000;
