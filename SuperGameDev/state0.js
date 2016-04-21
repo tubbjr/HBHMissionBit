@@ -1,5 +1,6 @@
 var demo = {};
 var speed = 6;
+<<<<<<< HEAD
 var adam;
 //var old;
 //var carrot;
@@ -10,24 +11,34 @@ var attack;
 
 
 
+=======
+
+var old;
+>>>>>>> Sam's-Branch
 demo.state0 = function(){};
 
 
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('dojo', 'assets/image00.png');
+<<<<<<< HEAD
 		game.load.spritesheet('ajay', 'assets/poop.png', 118, 266);
 //        game.load.spritesheet('old', 'assets/sampepper.png', 850, 1107);
         game.load.spritesheet('enemy', 'assets/enemycopy.png', 89, 141);
 //        game.load.spritesheet('test', 'assets/test2.png', 83, 138);
         game.load.spritesheet('attack', 'assets/attack.png', 163, 177);
         game.load.spritesheet('carrot', 'assets/carrot.png', 179, 414);
+=======
+		game.load.spritesheet('ajay', 'assets/ajay.png', 133, 211);
+        game.load.spritesheet('old', 'assets/sampepper.png', 850, 1107);
+>>>>>>> Sam's-Branch
 
 	},
 
 	create: function(){
         game.world.setBounds(0,0, 1500, 550);
         game.physics.startSystem(Phaser.Physics.ARCADE);
+<<<<<<< HEAD
         
 //        enemies = game.add.group();
 //        enemies.enableBody = true;
@@ -56,11 +67,20 @@ demo.state0.prototype = {
 //        enemy.scale.setTo(1.6,1.6);
         
 //        enemy.animations.add('move')
+=======
+        var tree = game.add.sprite(0, 0, 'dojo');
+        adam = game.add.sprite(0, 450, 'ajay');
+        old = game.add.sprite(300, 350, 'old');
+//        adam.frame = ;
+        adam.animations.add('walk', [0, 1 , 2 , 3 , 4]);
+       
+>>>>>>> Sam's-Branch
         
         
         tree.height=game.height;
         tree.width=game.width;
 //        adam.anchor.setTo(0.5, 0.5);
+<<<<<<< HEAD
 //        old.scale.setTo(0.18, 0.18);
         carrot.scale.setTo(0.6, 0.6)
 //        
@@ -79,11 +99,25 @@ demo.state0.prototype = {
         
         
     
+=======
+        old.scale.setTo(0.18, 0.18);
+//        
+        game.physics.enable(adam);
+        adam.body.collideWorldBounds = true;
+//        
+        game.camera.follow(adam);
+>>>>>>> Sam's-Branch
 //        
 //        game.scale.scaleMODE = Phaser.ScaleManager.SHOW_ALL;
+		
+		function ballHitBrick (_adam, _old) {
+
+    _old.kill();
+
 	},
 
 	update: function(){
+<<<<<<< HEAD
 //        game.physics.arcade.collide(adam, platforms);
          adam.body.velocity.x = 0;
 
@@ -105,6 +139,33 @@ demo.state0.prototype = {
     {
         //  Stand still
         adam.animations.stop();
+=======
+        if (game.input.keyboard.isDown(Phaser.Keyboard.D)){
+                              adam.x =  adam.x + speed; 
+                            adam.animations.play('walk', 20, true);
+                               adam.scale.setTo(-0.7, 0.7)
+        }
+        else if (game.input.keyboard.isDown(Phaser.Keyboard.A)){
+            adam.x = adam.x - speed;
+              adam.animations.play('walk', 20, true);
+            adam.scale.setTo(0.7, 0.7)
+        }
+         else{
+        adam.animations.stop('walk');
+        }
+       if (game.input.keyboard.isDown(Phaser.Keyboard.S)){
+            adam.y = adam.y + speed;
+        }
+       
+        if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
+            adam.y = adam.y - speed;
+                    if(adam.y < 400){
+                        adam.y = 400;
+                    }
+//            if (game.input.keyboard.isDown(Phaser.Keyboard.))
+        }
+	}
+>>>>>>> Sam's-Branch
 
         adam.frame = 0;
     }
